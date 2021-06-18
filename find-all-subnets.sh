@@ -1,13 +1,10 @@
 #!/bin/bash
 
-
 touch all-subnets.csv
 echo "region","CIDR","VPCID" > all-subnets.csv
 mkdir regions
 
 IFS=$'\n' regionlist=$(aws ec2 describe-regions --query Regions[*].[RegionName] --output text)
-
-
 
 for region in $regionlist
 do

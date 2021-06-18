@@ -1,11 +1,12 @@
 import ipaddress
 import pandas
-# Will Laws
+
 # import csv with list of all CIDR ranges and VPC-ID's
 ##################
+# Sample Schema below
 # region,CIDR,VPCID
 # "eu-north-1b","172.31.32.0/20","vpc-12345678"
-############
+##################
 
 dfsource = pandas.read_csv('all-subnets.csv')
 dfoverlap = pandas.DataFrame(columns =['OVERLAPS'])
